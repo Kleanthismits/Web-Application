@@ -1,0 +1,155 @@
+body {
+	background: #555;
+}
+
+.container {
+	max-width: 960px;
+	margin: auto;
+}
+#employeeList {
+	padding-bottom: 40px;
+}
+.wrong-input {
+	border: 2px solid red;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#saveEmp, #saveAttr {
+	width: 100%;
+	background-color: rgb(70, 70, 70);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	background-color: black;
+	color: antiquewhite;
+	border: none;
+	border-radius: 4px;
+	font-size: 10px;
+	text-align: center;
+	display: block;
+}
+
+.btn:hover {
+	background-color: gray;
+}
+
+.cancel {
+	background-color: #800000;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #f5f5f5;
+	border-radius: 50%;
+	color: #f5f5f5;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 0 3px grey;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#cancelContainer {
+	width: 100px;
+}
+
+#addAttr {
+	width: 40%;
+	margin: 10px auto;
+	font-size: medium;
+	cursor: pointer;
+	display: block;
+	padding: 10px;
+}
+
+#addEmp {
+	width: 60%;
+	margin: 10px auto;
+	font-size: medium;
+	cursor: pointer;
+	display: block;
+	padding: 10px;
+}
+
+caption {
+	color: rgb(253, 253, 253);
+	font-size: medium;
+}
+
+.attrId {
+	display: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+	color: rgb(22, 21, 21);
+}
+
+tr:nth-of-type(even) {
+	color: rgb(255, 255, 255);
+}
+
+th {
+	background: #333;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+
+.three {
+	margin-top: 10px;
+}
+
+.four {
+	width: 60%;
+	margin: 10px auto;
+}
+
+#dif {
+	background: #eee;
+}
+
+.alert {
+	text-align: center;
+	margin-top: 10px auto;
+	display: none;
+}
+
+.alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	margin:20px;
+}
+
+.alert-danger {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	margin:20px;
+}

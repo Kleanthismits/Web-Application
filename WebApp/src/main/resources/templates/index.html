@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cite Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+    <div id = "employeeList" style="overflow-x:auto;">
+        <table class="one">
+            <caption>Employees List</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date of Hire</th>
+                <th>Supervisor ID</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody id="result"></tbody>
+        </table>
+        <button class="btn" id="addEmp" value="Add New">Add New Employee</button>
+        <div class="alert" role="alert"></div>
+    </div>
+     
+
+    <div id="addNewEmp">
+        <div style="overflow-x:auto;">
+            <table class="two">
+                <caption>Employee Details</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Supervisor ID</th>
+                </tr>
+                <tr>
+                    <td><input class = "input" type="text" id="addName"/></td>
+                    <td>
+                    <select 
+                    required
+                    name="supervisorId" 
+                    id="supervisorId" 
+                    data-source="http://localhost:8080/employees"
+                    data-valueKey="emp_ID" 
+                    data-displayKey="emp_Name"></select>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button id="saveEmp" value="save">Save</button></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+    <div id="updateEmp">
+        <div style="overflow-x:auto;">
+            <table class="three">
+                <caption>Employee Details</caption>
+                <tr>
+                    <th>Name</th>
+                    <td><input class = "input" type="text" id="upName" required></td>
+                    <td rowspan="3" id="cancelContainer"><button class="btn cancel" id="cancelUpdate" value="update">Cancel</button></td>
+                </tr>
+                <tr>
+                    <th>Supervisor ID</th>
+                    <td>
+                        <select 
+                        required
+                        name="supervisorId" 
+                        id="supervisorId2" 
+                        data-source="http://localhost:8080/employees"
+                        data-valueKey="emp_ID" 
+                        data-displayKey="emp_Name"></select>
+                        
+                        </td>
+                </tr>
+                <tr>
+                    <td><button class="btn seeAttr" id="seeAttr" value="See Attributes">See Attributes</button></td>
+                    <td><button class="btn update" id="updateEmpB" value="update">Update</button></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="showAttributes">
+        <div style="overflow-x:auto;">
+            <table class="four">
+                <caption>Attributes</caption>
+                <tr>
+                    <td>ID</td>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tbody id="resultAttr"></tbody>
+            </table>
+            <button class="btn" id="addAttr" value="Add New">Add New Attribute</button>
+        </div>
+    </div>
+  
+
+    <div id="addNewAttr">
+
+        <div style="overflow-x:auto;">
+            
+                <table class="five">
+                    <caption>Attribute Details</caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td><input class = "input" type="text" id="addNametoAttr"/></td>
+                        <td><input class = "input" type="text" id="addValue"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button class = "btn" type = "submit" id="saveAttr" value="save">Save</button></td>
+                    </tr>
+
+                </table>
+            
+
+        </div>
+    </div>
+
+    <div id="updateAttr">
+        <div style="overflow-x:auto;">
+            <table class="three">
+                <caption>Attribute Details</caption>
+                <tr>
+                    <th>Name</th>
+                    <td><input class = "input" type="text" id="upNameAttr"></td>
+                    <td rowspan="3" id="cancelContainer"><button class="btn cancel" id="cancelUpdate" value="update">Cancel</button></td>
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td id="dif"><input class = "input" type="text" id="upValue"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="btn update" id="updateAttrB" value="update">Update</button></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="dialog-confirm" title="Are you sure?">
+      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+      These items will be permanently deleted and cannot be recovered!!!</p>
+    </div>
+    <div id="dialog-confirm2" title="Are you sure?">
+      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+      These items will be permanently deleted and cannot be recovered!!!</p>
+    </div>
+
+
+    <script type="text/javascript" src="getEmployees.js"></script>
+</body>
+
+</html>
